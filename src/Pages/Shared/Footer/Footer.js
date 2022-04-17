@@ -6,21 +6,22 @@ const Footer = () => {
     const year = today.getFullYear()
     return (
         <div className='footer'>
-            <div className='container footer-container'>
-                <div>
-                    <h3>My Office</h3>
+            <div className='container footer-container row'>
+                <div className='col-lg-6 col-sm-12 mb-5'>
+                    <h3 className='fs-1 fw-bold mb-4'>My Office</h3>
+                    <p>i strongly believe that everyone deserves equal rights. thar's why i put my client first on my way to the justice and truth</p>
                     <address>phone: 1-677-123-45297</address>
                     <address>location: 184 Main Collins Street</address>
                     <address>Office Time: Mon - Sat 8.00 - 18.00</address>
                 </div>
-                <div>
-                    <h3>Latest news</h3>
-                    <p>Stop worrying about the market</p>
-                    <span>may 9, 2022</span>
-                    <p>Law school programs</p>
-                    <span>may 22, 2022</span>
-                    <p>How to deal with law school stress</p>
-                    <span>june 12, 2022</span>
+                <div className='col-lg-5 col-sm-12 mb-5'>
+                    <h3 className='fs-1 fw-bold mb-4'>Latest news</h3>
+                    <span>Stop worrying about the market</span>
+                    <p>may 9, 2022</p>
+                    <span>Law school programs</span>
+                    <p>may 22, 2022</p>
+                    <span>How to deal with law school stress</span>
+                    <p>june 12, 2022</p>
                 </div>
             </div>
            <div className='copy-right'>

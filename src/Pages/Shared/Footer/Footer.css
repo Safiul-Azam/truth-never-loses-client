@@ -4,7 +4,7 @@
 }
 .footer-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
     color: #ddd;
     padding: 30px;
@@ -12,4 +12,9 @@
 .copy-right{
     background-color:#AA9166;
     padding:20px 0;
+}
+@media only screen and(max-width:576px) {
+    .footer-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
