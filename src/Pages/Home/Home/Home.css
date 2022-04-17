@@ -1,0 +1,20 @@
+
+.title-container{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.60),rgba(0, 0, 0, 0.60)), url(../../../images/banner1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.support-title{
+    padding-top: 200px;
+    color: #ffffff;
+}
+.support-title h2{
+    
+}
+.title-btn button{
+    margin-bottom: 200px;
+    margin-left: 20px;
+    color:#AA9166;
+}
