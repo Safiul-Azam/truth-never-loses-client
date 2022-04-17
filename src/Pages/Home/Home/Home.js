@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import AboutMe from '../AboutMe/AboutMe';
+import Services from '../Services/Services';
 import './Home.css'
 
 
@@ -18,6 +19,8 @@ const Home = () => {
                     <Button variant="outline-secondary">PURCHASE</Button>
                 </div>
             </div>
+            <AboutMe></AboutMe>
+            <Services></Services>
         </div>
     );
 };
