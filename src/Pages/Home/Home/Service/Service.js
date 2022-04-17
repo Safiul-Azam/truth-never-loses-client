@@ -5,15 +5,14 @@ import './Service.css'
 const Service = ({ service }) => {
     const { name, img, description, price } = service
     return (
-        <Card className='me-4 border my-5'>
+        <Card className='me-4 border rounded my-5'>
             <Card.Img variant="top" src={img} />
-            <Card.Body>
+            <Card.Body className='text-center mt-3'>
                 <Card.Title>{name}</Card.Title>
-                <Card.Title>${price}</Card.Title>
+                <Card.Title className='fs-4 fw-bold'>${price}</Card.Title>
                 
                 <Card.Text>
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.
+                    {description}
                 </Card.Text>
             </Card.Body>
             <Card>

@@ -12,7 +12,7 @@ const Header = () => {
 
                 <Navbar.Brand as={Link} to="/home">
                     <FontAwesomeIcon className='me-2' icon={faGavel}></FontAwesomeIcon>
-                     Thuth never loses
+                     Truth never loses
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
