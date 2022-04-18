@@ -8,6 +8,8 @@ import CheckOut from './Pages/CheckOut/CheckOut';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import LogIn from './Pages/Login/LogIn/LogIn';
 import SignUp from './Pages/Login/SignUp/SignUp';
+import Blog from './Pages/Blog/Blog';
+import About from './Pages/About/About';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='about' element={<About></About>}></Route>
         <Route path='/checkout' element={
           <RequireAuth>
             <CheckOut></CheckOut>
