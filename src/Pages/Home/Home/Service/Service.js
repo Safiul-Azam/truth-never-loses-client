@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({ service }) => {
-    const { name, img, description, price,id } = service
+    const { name, img, description, price } = service
     const navigate = useNavigate()
     const navigateToCheckOutPage = ()=>{
         navigate('/checkout')

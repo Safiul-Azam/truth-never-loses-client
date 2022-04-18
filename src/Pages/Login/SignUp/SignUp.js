@@ -25,6 +25,9 @@ const SignUp = () => {
     if(updating){
         return <Loading></Loading>
     }
+    if(loading){
+        return <Loading></Loading>
+    }
     const handleSubmit = async e => {
         e.preventDefault()
         const name = nameRef.current.value
@@ -33,6 +36,7 @@ const SignUp = () => {
         await createUserWithEmailAndPassword(email, password)
         await updateProfile({ displayName: name });
         toast('Updated profile');
+        navigate(from, {replace:true})
         
     }
     return (
@@ -62,8 +66,8 @@ const SignUp = () => {
                     <p>Already have an account? <Link className='toggle-link' to='/login'>Please login</Link></p>
                 </Form>
             </div>
-            <ToastContainer />
             <SocialLogin></SocialLogin>
+            <ToastContainer />
         </div>
     );
 };

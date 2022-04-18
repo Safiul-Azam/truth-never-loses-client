@@ -1,9 +1,10 @@
 import React from 'react';
 
-const CheckOut = () => {
+const CheckOut = ({service}) => {
     return (
         <div>
             <h2>checkout page</h2>
+            
         </div>
     );
 };
