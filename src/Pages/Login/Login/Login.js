@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Form } from 'react-bootstrap';
+import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './LogIn.css'
@@ -10,22 +10,26 @@ const Login = () => {
     const emailRef = useRef('')
     const passwordRef = useRef('')
     const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/";
     const [
-        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useSignInWithEmailAndPassword(auth);
+
       useEffect(()=>{
           if(user){
-              navigate('/home')
+              navigate(from ,{replace: true})
           }
       },[navigate, user])
+
     const handleSubmit = e => {
         e.preventDefault()
         const email = emailRef.current.value
         const password = passwordRef.current.value
-        createUserWithEmailAndPassword(email,password)
+        signInWithEmailAndPassword(email,password)
         console.log(email, password)
     }
     return (
@@ -40,9 +44,6 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
                 <button  className='services-btn btn border-none mb-3' type="submit">
                     Login

@@ -7,11 +7,11 @@ const Service = ({ service }) => {
     const { name, img, description, price,id } = service
     const navigate = useNavigate()
     const navigateToCheckOutPage = ()=>{
-        navigate('/checkout/'+ id)
+        navigate('/checkout')
     }
     return (
         <Card className='me-4 border rounded my-5'>
-             <Card>
+             <Card className='services-name'>
              <Card.Title className='fs-4 fw-bold'>{name}</Card.Title>
             </Card>
             <Card.Img variant="top" src={img} />
