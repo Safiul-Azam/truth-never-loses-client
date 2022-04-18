@@ -6,7 +6,7 @@ import signature from '../../../images/signature.png'
 
 const AboutMe = () => {
     return (
-        <div className='about-me container'>
+        <div className='about-me container' id='about-me'>
             <h2 className='text-center line mb-5'>About Me</h2>
             <div className='d-flex align-items-center row'>
                 <div className=' col-lg-6 col-md-4 col-sm-12 mb-3'>

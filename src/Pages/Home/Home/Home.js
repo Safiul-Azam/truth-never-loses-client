@@ -7,8 +7,7 @@ import './Home.css'
 
 const Home = () => {
     return (
-        <div>
-
+        <div id='home'>
             <div className='title-container'>
                 <div className='container support-title'>
                     <h2 className='fs-1'>Led by the truth</h2>

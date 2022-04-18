@@ -15,7 +15,7 @@ const services = [
 
 const Services = () => {
     return (
-        <div className='services-section'>
+        <div className='services-section' id='services'>
             <h2 className='text-center line pt-5'>My Services</h2>
             <div className="services-container container">
                 <CardGroup>

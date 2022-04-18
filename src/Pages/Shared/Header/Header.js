@@ -17,15 +17,15 @@ const Header = () => {
         <Navbar sticky="top" className='header-container' collapseOnSelect expand="lg" variant="dark">
             <Container>
 
-                <Navbar.Brand as={Link} to="/home">
+                <Navbar.Brand as={Link} to="home#home">
                     <FontAwesomeIcon className='me-2' icon={faGavel}></FontAwesomeIcon>
                     Truth never loses
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <Nav.Link href="home#services">Services</Nav.Link>
+                        <Nav.Link href="home#about-me">About me</Nav.Link>
                     </Nav>
                     <Nav>
                         <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
