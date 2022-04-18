@@ -1,17 +1,20 @@
 import React, { useEffect, useRef } from 'react';
 import { Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../../Shared/Loading/Loading';
 
 const SignUp = () => {
     const nameRef = useRef('')
     const emailRef = useRef('')
     const passwordRef = useRef('')
     const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/";
     const [
         createUserWithEmailAndPassword,
         user,
@@ -19,13 +22,9 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-    useEffect(() => {
-        if (user) {
-            console.log(user)
-        }
-    }, [navigate, user])
-
-
+    if(updating){
+        return <Loading></Loading>
+    }
     const handleSubmit = async e => {
         e.preventDefault()
         const name = nameRef.current.value
@@ -34,7 +33,7 @@ const SignUp = () => {
         await createUserWithEmailAndPassword(email, password)
         await updateProfile({ displayName: name });
         toast('Updated profile');
-        navigate('/home')
+        
     }
     return (
         <div>
@@ -63,8 +62,8 @@ const SignUp = () => {
                     <p>Already have an account? <Link className='toggle-link' to='/login'>Please login</Link></p>
                 </Form>
             </div>
-            <SocialLogin></SocialLogin>
             <ToastContainer />
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
