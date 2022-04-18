@@ -1,9 +1,14 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({ service }) => {
-    const { name, img, description, price } = service
+    const { name, img, description, price,id } = service
+    const navigate = useNavigate()
+    const navigateToCheckOutPage = ()=>{
+        navigate('/checkout/'+ id)
+    }
     return (
         <Card className='me-4 border rounded my-5'>
              <Card>
@@ -18,7 +23,7 @@ const Service = ({ service }) => {
                 </Card.Text>
             </Card.Body>
             <Card>
-                <button className='services-btn btn'>GET SERVICE</button>
+                <button onClick={navigateToCheckOutPage} className='services-btn btn'>GET SERVICE</button>
             </Card>
         </Card>
     );
