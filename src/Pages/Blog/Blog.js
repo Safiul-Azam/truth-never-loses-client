@@ -30,6 +30,15 @@ const Blog = () => {
                         3.pxdb
                         4.AWS amplify
                     </Accordion.Body>
+                    <Accordion.Body>
+                        because firebase Authentication Firebase provides us easy sign in system with email and password and google and git hub log in system. And provides deploy system  so we can deploy easily
+                        <br />
+                        Firebase alternative
+                        1.parse
+                        2.kuzzk
+                        3.pxdb
+                        4.AWS amplify
+                    </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
         </div>

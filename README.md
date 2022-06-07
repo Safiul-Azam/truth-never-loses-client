@@ -2,6 +2,9 @@
 
 This project was for a truthful lawyer [Truth never loses](https://truth-never-loses.web.app/).
 
+## features and functionality
+* Implemented authentication by firebase and login with email password and social sign-in system
+* Responsive for mobile, tablet, and laptop devices.
 * if you check out any service you must be login or sign up
 * i used in my site protected route or require auth 
 * authentication with google and github and email and password 

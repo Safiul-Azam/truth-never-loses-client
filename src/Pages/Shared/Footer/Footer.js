@@ -29,6 +29,13 @@ const Footer = () => {
            </div>
         </div>
     );
+    // const product_name = product.product_name;
+    // const image = product.image;
+    // const description = product.description;
+    // const price = product.price;
+    // const quantity = parseInt(product.quantity) - 1;
+    // const email = product.email;
+    // const supplyar_name = product.supplyar_name;
 };
 
 export default Footer;
