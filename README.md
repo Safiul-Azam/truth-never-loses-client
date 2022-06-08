@@ -3,7 +3,9 @@
 This project was for a truthful lawyer [Truth never loses](https://truth-never-loses.web.app/).
 
 ## features and functionality
-* Implemented authentication by firebase and login with email password and social sign-in system
+
+* Implemented authentication by firebase and login with email password
+  and social sign-in system
 * Responsive for mobile, tablet, and laptop devices.
 * if you check out any service you must be login or sign up
 * i used in my site protected route or require auth 
@@ -12,9 +14,7 @@ This project was for a truthful lawyer [Truth never loses](https://truth-never-l
 * i used in footer a copyright symbol and dynamic year
 
 
-
 # which library i have used in my project
-
 * react-dom
 * react-router-dom
 * react-fire-base-hooks
